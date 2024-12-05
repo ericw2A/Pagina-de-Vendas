@@ -1,117 +1,139 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+        <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tem de Tudo - Loja online com os melhores produtos em eletrônicos, calçados e roupas.">
-  <meta name="keywords" content="eletrônicos, calçados, roupas, loja online, compras">
-  <meta name="author" content="Tem de Tudo">
-  <title>Tem de Tudo - Loja Online</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Tem de Tudo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #pesquisa {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    #barraDePesquisa {
+      padding: 0.8rem;
+      width: 50%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1.2rem;
+    }
+
+    .produto {
+      text-align: center;
+      margin: 1rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .produto h3 {
+      font-size: 1.3rem;
+      margin: 1rem 0;
+    }
+
+    .preco {
+      color: #ff7f50;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .produto:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .produto button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .produto button:hover {
+      background-color: #2980b9;
+    }
+
+    .contato {
+      padding: 3rem 1rem;
+      background-color: #ecf0f1;
+    }
+
+    .contato h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .contato p {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .contato form {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contato form input,
+    .contato form textarea {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contato form button {
+      padding: 1rem 2rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contato form button:hover {
+      background-color: #2980b9;
+    }
+
+    footer {
+      background-color: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+  </style>
 </head>
 <body>
-  
-  <header>
-    <div class="container">
-      <h1>Tem de Tudo</h1>
-      <nav>
-        <ul>
-          <li><a href="#eletronicos">Eletrônicos</a></li>
-          <li><a href="#calcados">Calçados</a></li>
-          <li><a href="#roupas">Roupas</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-      <div class="search-bar">
-        <form id="searchForm" onsubmit="return searchProducts(event)">
-          <input type="text" id="searchInput" placeholder="Buscar produtos..." required>
-          <button type="submit">🔍</button>
-        </form>
-      </div>
-    </div>
-  </header>
-
-  <section class="banner">
-    <h2>Bem-vindo à Tem de Tudo!</h2>
-    <p>Confira nossas promoções e encontre os melhores produtos.</p>
-    <a href="#eletronicos" class="btn">Ver Produtos</a>
-  </section>
-
-  <section id="eletronicos" class="produtos-secao">
-    <h2>Eletrônicos</h2>
-    <div class="produtos" id="eletronicosProducts">
-      <div class="produto">
-        <img src="s24.jpg" alt="Smartphone S24 Ultra">
-        <h3>S24 Ultra</h3>
-        <p class="preco">R$ 5.299,00</p>
-        <button class="btn comprar">Comprar</button>
-      </div>
-      <div class="produto">
-        <img src="nintendo.jpg" alt="Nintendo Switch">
-        <h3>Nintendo Switch</h3>
-        <p class="preco">R$ 2.499,00</p>
-        <button class="btn comprar">Comprar</button>
-      </div>
-      <div class="produto">
-        <img src="mac.jpg" alt="Macbook Pro">
-        <h3>Macbook Pro</h3>
-        <p class="preco">R$ 12.499,00</p>
-        <button class="btn comprar">Comprar</button>
-      </div>
-      <div class="produto">
-        <img src="tv1.jpg" alt="Smart TV 4K">
-        <h3>Smart TV 4K 55”</h3>
-        <p class="preco">R$ 3.499,00</p>
-        <button class="btn comprar">Comprar</button>
-      </div>
-      <div class="produto">
-        <img src="fone.jpg" alt="Tênis Nike Air Max">
-        <h3>Buds 2 Pro</h3>
-        <p class="preco">R$ 399,00</p>
-        <button class="btn comprar">Comprar</button>
-      </div>
-      <div class="produto">
-        <img src="tablet.jpg" alt="Tablet">
-        <h3>Tablet Galaxy s4</h3>
-        <p class="preco">R$ 2.200,00</p>
-        <button class="btn comprar">Comprar</button>
-      </div>
-      <div class="produto">
-        <img src="book.jpg" alt="Book">
-        <h3>Book</h3>
-        <p class="preco">R$ 80,00</p>
-        <button class="btn comprar">Comprar</button>
-      </div>
-      <div class="produto">
-        <img src="book.jpg" alt="Galaxy Book4">
-        <h3>Galaxy Book4</h3>
-        <p class="preco">R$ 4.999,00</p>
-        <button class="btn comprar">Comprar</button>
-      </div>
-    </div>
+  <section id="pesquisa">
+    <input type="text" id="barraDePesquisa" placeholder="Procure por produtos..." oninput="filtrarProdutos()">
   </section>
 
   <section id="calcados" class="produtos-secao">
     <h2>Calçados</h2>
-    <div class="produtos" id="calcadosProducts">
-      <div class="produto">
-        <img src="tn3.jpg" alt="Tênis Nike Air Max">
-        <h3>Nike Air Max Plus</h3>
-        <p class="preco">R$ 799,00</p>
-        <button class="btn comprar">Comprar</button>
-      </div>
-      <div class="produto">
-        <img src="tn2.jpg" alt="Tênis Nike TN Plus">
-        <h3>Nike Air Max TN Plus</h3>
-        <p class="preco">R$ 999,00</p>
-        <button class="btn comprar">Comprar</button>
-      </div>
-      <div class="produto">
-        <img src="assuna.jpg" alt="Sandália Assuna">
-        <h3>Assuna Preto</h3>
-        <p class="preco">R$ 149,00</p>
-        <button class="btn comprar">Comprar</button>
-      </div>
+    <div class="produtos">
       <div class="produto">
         <img src="mizuno.jpg" alt="Tênis Mizuno Branco">
         <h3>Mizuno Branco</h3>
@@ -135,7 +157,7 @@
 
   <section id="roupas" class="produtos-secao">
     <h2>Roupas</h2>
-    <div class="produtos" id="roupasProducts">
+    <div class="produtos">
       <div class="produto">
         <img src="camisa1.jpg" alt="Camisa Social Masculina">
         <h3>Camisa Social</h3>
@@ -184,7 +206,20 @@
     <p>&copy; 2024 Tem de Tudo. Todos os direitos reservados.</p>
   </footer>
 
- 
+  <script>
+    function filtrarProdutos() {
+      const termo = document.getElementById('barraDePesquisa').value.toLowerCase();
+      const produtos = document.querySelectorAll('.produto');
 
+      produtos.forEach(produto => {
+        const nomeProduto = produto.querySelector('h3').textContent.toLowerCase();
+        if (nomeProduto.includes(termo)) {
+          produto.style.display = 'block';
+        } else {
+          produto.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
