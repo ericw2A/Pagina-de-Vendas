@@ -23,23 +23,23 @@
         </ul>
       </nav>
       <div class="search-bar">
-        <input type="text" placeholder="Buscar produtos...">
-        <button>🔍</button>
+        <form id="searchForm" onsubmit="return searchProducts(event)">
+          <input type="text" id="searchInput" placeholder="Buscar produtos..." required>
+          <button type="submit">🔍</button>
+        </form>
       </div>
     </div>
   </header>
 
-  
   <section class="banner">
     <h2>Bem-vindo à Tem de Tudo!</h2>
     <p>Confira nossas promoções e encontre os melhores produtos.</p>
     <a href="#eletronicos" class="btn">Ver Produtos</a>
   </section>
 
-  
   <section id="eletronicos" class="produtos-secao">
     <h2>Eletrônicos</h2>
-    <div class="produtos">
+    <div class="produtos" id="eletronicosProducts">
       <div class="produto">
         <img src="s24.jpg" alt="Smartphone S24 Ultra">
         <h3>S24 Ultra</h3>
@@ -75,29 +75,25 @@
         <h3>Tablet Galaxy s4</h3>
         <p class="preco">R$ 2.200,00</p>
         <button class="btn comprar">Comprar</button>
-    </div>
-    <div class="produto">
-      <img src="book.jpg" alt="Book">
-      <h3>Book</h3>
-      <p class="preco">R$ 80,00</p>
-      <button class="btn comprar">Comprar</button>
-  </div>
-  <div class="produto">
-    <img src="book.jpg" alt="Book">
-    <h3>Galaxy Book4</h3>
-    <p class="preco">R$ 4.999,00</p>
-    <button class="btn comprar">Comprar</button>
-</div>
-
-  
-    
+      </div>
+      <div class="produto">
+        <img src="book.jpg" alt="Book">
+        <h3>Book</h3>
+        <p class="preco">R$ 80,00</p>
+        <button class="btn comprar">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="book.jpg" alt="Galaxy Book4">
+        <h3>Galaxy Book4</h3>
+        <p class="preco">R$ 4.999,00</p>
+        <button class="btn comprar">Comprar</button>
+      </div>
     </div>
   </section>
 
-  
   <section id="calcados" class="produtos-secao">
     <h2>Calçados</h2>
-    <div class="produtos">
+    <div class="produtos" id="calcadosProducts">
       <div class="produto">
         <img src="tn3.jpg" alt="Tênis Nike Air Max">
         <h3>Nike Air Max Plus</h3>
@@ -117,30 +113,29 @@
         <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
-        <img src="mizuno.jpg" alt="Tênis Nike Air Max">
-        <h3>mizuno branco</h3>
-        <p class="preco">R$ 1799,00</p>
+        <img src="mizuno.jpg" alt="Tênis Mizuno Branco">
+        <h3>Mizuno Branco</h3>
+        <p class="preco">R$ 1.799,00</p>
         <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
         <img src="air.jpg" alt="Tênis Nike Air Max">
-        <h3>Air max 97 branco</h3>
+        <h3>Air Max 97 Branco</h3>
         <p class="preco">R$ 599,00</p>
         <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
-        <img src="tenis.jpg" alt="Tênis Nike Air Max">
-        <h3>DN branco</h3>
+        <img src="tenis.jpg" alt="Tênis Nike DN Branco">
+        <h3>DN Branco</h3>
         <p class="preco">R$ 999,00</p>
         <button class="btn comprar">Comprar</button>
       </div>
     </div>
   </section>
 
-  
   <section id="roupas" class="produtos-secao">
     <h2>Roupas</h2>
-    <div class="produtos">
+    <div class="produtos" id="roupasProducts">
       <div class="produto">
         <img src="camisa1.jpg" alt="Camisa Social Masculina">
         <h3>Camisa Social</h3>
@@ -148,35 +143,32 @@
         <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
-        <img src="polo5.jpg" alt="camisa nike">
-        <h3>Polo nike preta</h3>
+        <img src="polo5.jpg" alt="Camisa Nike">
+        <h3>Polo Nike Preta</h3>
         <p class="preco">R$ 299,00</p>
         <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
-        <img src="nike5.jpg" alt="Camisa nike">
-        <h3>Camisa branca com listra preta nike</h3>
+        <img src="nike5.jpg" alt="Camisa Nike">
+        <h3>Camisa Branca com Listra Preta Nike</h3>
         <p class="preco">R$ 159,00</p>
         <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
-        <img src="shot.jpg" alt="Shorts">
-        <h3>shorts nike preto</h3>
+        <img src="shot.jpg" alt="Shorts Nike Preto">
+        <h3>Shorts Nike Preto</h3>
         <p class="preco">R$ 250,00</p>
         <button class="btn comprar">Comprar</button>
-    </div>
-    <div class="produto">
-      <img src="calça.jpg" alt="Calça">
-      <h3>Calça preta nike</h3>
-      <p class="preco">R$ 199,99</p>
-      <button class="btn comprar">Comprar</button>
-  </div>
-  
-    
+      </div>
+      <div class="produto">
+        <img src="calça.jpg" alt="Calça Nike Preta">
+        <h3>Calça Preta Nike</h3>
+        <p class="preco">R$ 199,99</p>
+        <button class="btn comprar">Comprar</button>
+      </div>
     </div>
   </section>
 
-  
   <section id="contato" class="contato">
     <h2>Entre em Contato</h2>
     <p>Quer saber mais sobre nossos produtos? Envie uma mensagem!</p>
@@ -188,23 +180,22 @@
     </form>
   </section>
 
-  
   <footer>
     <p>&copy; 2024 Tem de Tudo. Todos os direitos reservados.</p>
   </footer>
+
   <script>
-    function filterProducts() {
-      var input = document.getElementById("searchInput").value.toLowerCase();
-      var sections = document.querySelectorAll('.produtos'); // Seleciona todas as seções de produtos
-      sections.forEach(function(section) {
-        var products = section.getElementsByClassName("produto");
-        for (var i = 0; i < products.length; i++) {
-          var productName = products[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
-          if (productName.indexOf(input) > -1) {
-            products[i].style.display = ""; // Exibe o produto se corresponder
-          } else {
-            products[i].style.display = "none"; // Esconde o produto se não corresponder
-          }
+    function searchProducts(event) {
+      event.preventDefault(); // Evita o envio do formulário e recarregamento da página
+      const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+      const allProducts = document.querySelectorAll('.produto');
+
+      allProducts.forEach(product => {
+        const productName = product.querySelector('h3').textContent.toLowerCase();
+        if (productName.includes(searchQuery)) {
+          product.style.display = 'block'; // Exibe o produto
+        } else {
+          product.style.display = 'none'; // Esconde o produto
         }
       });
     }
